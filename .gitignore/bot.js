@@ -20,9 +20,15 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-bot.on("ready", () => {
-  console.log(`${bot.user.username} en service.`);
-  bot.user.setActivity("Akatsuki | ?aide ");
+bot.on('ready', () => {
+  console.log(`${bot.user.username} en service.`)
+  bot.user.setPresence({
+      game: {
+          name: '𝘼𝙆𝘼𝙏𝙎𝙐𝙆𝙄 𝙎𝙀𝙇𝙁𝘽𝙊𝙏',
+          type: "STREAMING",
+          url: "https://www.twitch.tv/akatsukiselfbot"
+      }
+  });
 });
 
 bot.on("message", message => {
