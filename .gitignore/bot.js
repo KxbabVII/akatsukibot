@@ -24,7 +24,7 @@ bot.on('ready', () => {
   console.log(`${bot.user.username} en service.`)
   bot.user.setPresence({
       game: {
-          name: '𝘼𝙆𝘼𝙏𝙎𝙐𝙆𝙄 𝙎𝙀𝙇𝙁𝘽𝙊𝙏',
+          name: '𝘼𝙆𝘼𝙏𝙎𝙐𝙆𝙄',
           type: "STREAMING",
           url: "https://www.twitch.tv/akatsukiselfbot"
       }
