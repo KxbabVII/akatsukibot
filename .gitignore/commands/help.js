@@ -12,8 +12,7 @@ module.exports.run = async (bot, message, args) => {
         .addField('**Commandes fun :**', 'everyone, avatar, 8ball, say, level, jvounike, issou, tv,\nplay, stop, rousseau')
         .addField('**Commandes informations:**', 'serverinfo, info, userinfo, membercount, serverowner,\ninvite, ping, aide, cmdinfo')
         .addBlankField()
-        .setFooter(`Akatsuki | Commande aide demandé par ${message.author.tag}`, botIcon)
-        .setThumbnail(`${message.author.avatarURL}`);
+        .setFooter(`Akatsuki | Commande help demandé par ${message.author.tag}`, botIcon)
 
         return message.channel.send(helpEmbed)
         
