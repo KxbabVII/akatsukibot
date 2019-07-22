@@ -2,11 +2,14 @@ const Discord = require ("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission("ADMINISTRATOR"))
+    if(!message.member.hasPermission("ADMINISTRATOR")) {
+
     let errorPermSetup = new Discord.RichEmbed()
     .setDescription("Vous n'avez pas la permission d'utiliser cette commande.")
     .setColor("RANDOM")
      message.reply(errorPermSetup)
+
+    }
 
      message.guild.createChannel('「🖥」report',"text")
      message.guild.createChannel('「📔」logs-akatsuki',"text")
