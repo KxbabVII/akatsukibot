@@ -2,16 +2,22 @@ const Discord = require ("discord.js");
 
 module.exports.run = async (bot, message, args) => {
  
-    if(!message.member.hasPermission("MANAGE_MESSAGES"))
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+
         let errorPermClear = new Discord.RichEmbed()
         .setDescription("Vous n'avez pas la permission d'utiliser cette commande.")
         .setColor("RANDOM")
          message.reply(errorPermClear)
 
-    if (!args[0])
+    }
+
+    if (!args[0]) {
     let argsErrorClear = new Discord.RichEmbed()
     .setDescription("Veuillez indiquer le nombre de message à supprimer | Syntaxe : ?clear nombre")
     .setColor("RANDOM")
+    message.reply(argsErrorClear)
+
+    }
 
     let clearEmbed = new Discord.RichEmbed()
     .setDescription(`Suppression de **${args[0]}** messages en cours.`)
@@ -24,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 
     })
 
-    }
+}
 
     module.exports.help = {
         name: "clear"
