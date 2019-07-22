@@ -6,11 +6,11 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("Informations sur le bot")
     .setColor("#dc143c")
     .setThumbnail(botIcon)
-    .addField("Nom du bot", bot.user.username)
-    .addField("Commandes", "-----------")
-    .addField('Librairies :', 'discord.js, fs')
-    .addField('')
-    .setFooter(`Akatsuki | Commande serverinfo demandé par ${message.author.tag}`, botIcon);
+    .addField("Nom du bot :", bot.user.username)
+    .addField("Commandes :", "28")
+    .addField('Librairies :', 'discord.js, fs, ytdl-core')
+    .addField('Discord de support :', "https://discord.gg/4gfWGEj")
+    .setFooter(`Akatsuki | Commande info demandé par ${message.author.tag}`, botIcon);
   return message.channel.send(infoembed);
   
   console.log("Commande info exécuté par", message.author.username, "sur le serveur", message.guild.name);
