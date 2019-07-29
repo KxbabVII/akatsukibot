@@ -7,6 +7,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor("RANDOM")
       .setTitle("GroCha")
       .setImage(body.file)
+              .setFooter(`Akatsuki | Commande grocha demandé par ${message.author.tag}`, botIcon)
       
       message.channel.send(GroCha)
       console.log("Commande grocha exécuté")
